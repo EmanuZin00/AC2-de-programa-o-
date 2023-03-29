@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de custos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .resultado {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            max-width: 500px;
+            margin: 0 auto;
+            display: none;
+        }
+        .resultado p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .resultado span {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/JavaScript" src="script"></script>
+    <h1>Calculadora de custos</h1>
+    <form>
+        <label for="peso">Peso da mercadoria (em kg)</label>
+        <input type="number" id="peso" name="peso" min="0" step="0.01" required>
+        <label for="distancia">Distância (em km)</label>
+        <input type="number" id="distancia" name="distancia" min="0" required>
+        <label for="tipo">Tipo de envio</label>
+        <select id="tipo" name="tipo">
+            <option value="regular">Regular</option>
+            <option value="expresso">Expresso</option>
+            <option value="agendado">Agendado</option>
+        </select>
+        <button type="button" onclick="calcularCusto()">Calcular custo</button>
+    </form>
+   
